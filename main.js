@@ -1,6 +1,13 @@
 let container = document.querySelector("#container");
 let gridItem = document.querySelectorAll("#container .grid-item");
 
+for(let i = 0; i < gridItem.length; i++){
+    gridItem[i].addEventListener('mouseover', function(){
+        gridItem[i].style.backgroundColor = "grey";
+
+    });
+
+}
 
 let readJeopardyData = async () => {
     let rawJeopardyData = await fetch ('jeopardy.json');

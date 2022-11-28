@@ -26,10 +26,7 @@ let readJeopardyData = async () => {
     console.log(groupedData);
     
     console.log(groupedData.$200); // access $200 questions
-    for(let i = 0; i < gridItem.length; i++){
-        if(gridItem[i].className === "one-hundred"){
-        }
-    }
+ 
 }    
 
 readJeopardyData();

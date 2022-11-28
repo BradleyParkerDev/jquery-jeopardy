@@ -25,6 +25,10 @@ h2{
     text-shadow: 2px  2px black;
 }
 
+p{
+    text-align: center;
+}
+
 form{
     text-align: center;
 }

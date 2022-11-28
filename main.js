@@ -8,6 +8,13 @@ for(let i = 0; i < gridItem.length; i++){
     });
 
 }
+for(let i = 0; i < gridItem.length; i++){
+    gridItem[i].addEventListener('mouseout', function(){
+        gridItem[i].style.backgroundColor = "blue";
+
+    });
+
+}
 
 let readJeopardyData = async () => {
     let rawJeopardyData = await fetch ('jeopardy.json');

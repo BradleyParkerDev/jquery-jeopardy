@@ -14,8 +14,17 @@
 
 h1{
     text-align: center;
+    color: gold;
+    text-shadow: 2px  2px black;
+
 }
 
 h2{
+    text-align: center;
+    color: gold;
+    text-shadow: 2px  2px black;
+}
+
+form{
     text-align: center;
 }

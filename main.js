@@ -41,7 +41,7 @@ let readJeopardyData = async () => {
     //Event listerners for clicking grid items
     for(let i = 0; i < gridItem.length; i++){
         let random = 0;
-
+        //Clicking $100 values
         if(gridItem[i].className === "grid-item one-hundred"){
             gridItem[i].addEventListener('click', function(){
                 // question.innerText = "100"
@@ -54,6 +54,7 @@ let readJeopardyData = async () => {
                 question.innerText = newJGItem.question;
             })
         }
+        //Clicking $200 values
         else if(gridItem[i].className === "grid-item two-hundred"){
             gridItem[i].addEventListener('click', function(){
                 // question.innerText= "200"
@@ -66,6 +67,7 @@ let readJeopardyData = async () => {
                 question.innerText = newJGItem.question;
             })
         }
+        //Clicking $400 values
         else if(gridItem[i].className === "grid-item four-hundred"){
             gridItem[i].addEventListener('click', function(){
                 // question.innerText= "400"
@@ -78,6 +80,7 @@ let readJeopardyData = async () => {
                 question.innerText = newJGItem.question;
             })
         }
+        //Clicking $600 values
         else if(gridItem[i].className === "grid-item six-hundred"){
             gridItem[i].addEventListener('click', function(){
                 // question.innerText= "600"
@@ -90,6 +93,7 @@ let readJeopardyData = async () => {
                 question.innerText = newJGItem.question;
             })
         }
+        //Clicking $800 values
         else if(gridItem[i].className === "grid-item eight-hundred"){
             gridItem[i].addEventListener('click', function(){
                 // question.innerText= "800"

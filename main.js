@@ -32,8 +32,8 @@ let readJeopardyData = async () => {
         //Clicking $100 values
         if(gridItem[i].className === "grid-item one-hundred"){
             gridItem[i].addEventListener('click', function(){
-                
                 gridItem[i].style.backgroundColor = "grey";
+
                 random = getRandomNumber(groupedData.$100.length);
                 newJGItem = groupedData.$100[random];
                 console.log(newJGItem)
@@ -43,10 +43,9 @@ let readJeopardyData = async () => {
         //Clicking $200 values
         else if(gridItem[i].className === "grid-item two-hundred"){
             gridItem[i].addEventListener('click', function(){
-                
                 gridItem[i].style.backgroundColor = "grey";
+                
                 random = getRandomNumber(groupedData.$200.length);
-
                 newJGItem = groupedData.$200[random];
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;

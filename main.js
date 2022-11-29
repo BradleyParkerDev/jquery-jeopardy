@@ -17,6 +17,7 @@ let points = 0;
 //JSON data fetch
 let readJeopardyData = async () => {
     let newJGItem;
+    let clicked = false;
     //fetching data
     let rawJeopardyData = await fetch ('jeopardy.json');
     let data = await rawJeopardyData.json()
@@ -33,55 +34,72 @@ let readJeopardyData = async () => {
         if(gridItem[i].className === "grid-item one-hundred"){
             gridItem[i].addEventListener('click', function(){
                 gridItem[i].style.backgroundColor = "grey";
+                clicked = true;
+                if(clicked = true && gridItem[i].classList.contains("one-hundred")){
+                    random = getRandomNumber(groupedData.$100.length);
+                    newJGItem = groupedData.$100[random];
+                    console.log(newJGItem)
+                    question.innerText = newJGItem.question;
+                    gridItem[i].classList.replace("one-hundred","selected")                    
+                }
 
-                random = getRandomNumber(groupedData.$100.length);
-                newJGItem = groupedData.$100[random];
-                console.log(newJGItem)
-                question.innerText = newJGItem.question;
+
             })
         }
         //Clicking $200 values
         else if(gridItem[i].className === "grid-item two-hundred"){
             gridItem[i].addEventListener('click', function(){
                 gridItem[i].style.backgroundColor = "grey";
-                
-                random = getRandomNumber(groupedData.$200.length);
-                newJGItem = groupedData.$200[random];
-                console.log(newJGItem)
-                question.innerText = newJGItem.question;
+                clicked = true;
+                if(clicked = true && gridItem[i].classList.contains("two-hundred")){
+                    random = getRandomNumber(groupedData.$200.length);
+                    newJGItem = groupedData.$200[random];
+                    console.log(newJGItem)
+                    question.innerText = newJGItem.question;
+                    gridItem[i].classList.replace("two-hundred","selected")                    
+                }                
             })
         }
         //Clicking $400 values
         else if(gridItem[i].className === "grid-item four-hundred"){
             gridItem[i].addEventListener('click', function(){
                 gridItem[i].style.backgroundColor = "grey";
-
-                random = getRandomNumber(groupedData.$400.length);
-                newJGItem = groupedData.$400[random];
-                console.log(newJGItem)
-                question.innerText = newJGItem.question;
+                clicked = true;
+                if(clicked = true && gridItem[i].classList.contains("four-hundred")){
+                    random = getRandomNumber(groupedData.$400.length);
+                    newJGItem = groupedData.$400[random];
+                    console.log(newJGItem)
+                    question.innerText = newJGItem.question;
+                    gridItem[i].classList.replace("four-hundred","selected")                    
+                } 
             })
         }
         //Clicking $600 values
         else if(gridItem[i].className === "grid-item six-hundred"){
             gridItem[i].addEventListener('click', function(){
                 gridItem[i].style.backgroundColor = "grey";
-
-                random = getRandomNumber(groupedData.$600.length);
-                newJGItem = groupedData.$600[random];
-                console.log(newJGItem)
-                question.innerText = newJGItem.question;
+                clicked = true;
+                if(clicked = true && gridItem[i].classList.contains("six-hundred")){
+                    random = getRandomNumber(groupedData.$600.length);
+                    newJGItem = groupedData.$600[random];
+                    console.log(newJGItem)
+                    question.innerText = newJGItem.question;
+                    gridItem[i].classList.replace("six-hundred","selected")                    
+                } 
             })
         }
         //Clicking $800 values
         else if(gridItem[i].className === "grid-item eight-hundred"){
             gridItem[i].addEventListener('click', function(){
                 gridItem[i].style.backgroundColor = "grey";
-
-                random = getRandomNumber(groupedData.$800.length);
-                newJGItem = groupedData.$800[random];
-                console.log(newJGItem)
-                question.innerText = newJGItem.question;
+                clicked = true;
+                if(clicked = true && gridItem[i].classList.contains("eight-hundred")){
+                    random = getRandomNumber(groupedData.$800.length);
+                    newJGItem = groupedData.$800[random];
+                    console.log(newJGItem)
+                    question.innerText = newJGItem.question;
+                    gridItem[i].classList.replace("eight-hundred","selected")                    
+                } 
             })
         }
     } 
@@ -132,18 +150,3 @@ const getRandomNumber = function(max) {
     const result = Math.ceil(range);
     return result;
 }
-
-
-    ///////////////////////////////////////////////////////////////////
-    //Event listeners for hovering over grid items - color change
-    ///////////////////////////////////////////////////////////////////
-    // for(let i = 0; i < gridItem.length; i++){
-    //     gridItem[i].addEventListener('mouseover', function(){
-    //         gridItem[i].style.backgroundColor = "grey";
-    //     });
-    // }
-    // for(let i = 0; i < gridItem.length; i++){
-    //     gridItem[i].addEventListener('mouseout', function(){
-    //             gridItem[i].style.backgroundColor = "blue";
-    //     });
-    // }

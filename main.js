@@ -44,12 +44,8 @@ let readJeopardyData = async () => {
         //Clicking $100 values
         if(gridItem[i].className === "grid-item one-hundred"){
             gridItem[i].addEventListener('click', function(){
-                // question.innerText = "100"
                 random = getRandomNumber(groupedData.$100.length);
                 newJGItem = groupedData.$100[random];
-                gridItem[i].removeEventListener('mouseout',function(){
-                    gridItem[i].style.backgroundColor = "blue";
-                });
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;
             })
@@ -57,12 +53,8 @@ let readJeopardyData = async () => {
         //Clicking $200 values
         else if(gridItem[i].className === "grid-item two-hundred"){
             gridItem[i].addEventListener('click', function(){
-                // question.innerText= "200"
                 random = getRandomNumber(groupedData.$200.length);
                 newJGItem = groupedData.$200[random];
-                gridItem[i].removeEventListener('mouseout',function(){
-                    gridItem[i].style.backgroundColor = "blue";
-                });
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;
             })
@@ -70,12 +62,8 @@ let readJeopardyData = async () => {
         //Clicking $400 values
         else if(gridItem[i].className === "grid-item four-hundred"){
             gridItem[i].addEventListener('click', function(){
-                // question.innerText= "400"
                 random = getRandomNumber(groupedData.$400.length);
                 newJGItem = groupedData.$400[random];
-                gridItem[i].removeEventListener('mouseout',function(){
-                    gridItem[i].style.backgroundColor = "blue";
-                });
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;
             })
@@ -83,12 +71,8 @@ let readJeopardyData = async () => {
         //Clicking $600 values
         else if(gridItem[i].className === "grid-item six-hundred"){
             gridItem[i].addEventListener('click', function(){
-                // question.innerText= "600"
                 random = getRandomNumber(groupedData.$600.length);
                 newJGItem = groupedData.$600[random];
-                gridItem[i].removeEventListener('mouseout',function(){
-                    gridItem[i].style.backgroundColor = "blue";
-                });
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;
             })
@@ -96,12 +80,8 @@ let readJeopardyData = async () => {
         //Clicking $800 values
         else if(gridItem[i].className === "grid-item eight-hundred"){
             gridItem[i].addEventListener('click', function(){
-                // question.innerText= "800"
                 random = getRandomNumber(groupedData.$800.length);
                 newJGItem = groupedData.$800[random];
-                gridItem[i].removeEventListener('mouseout',function(){
-                    gridItem[i].style.backgroundColor = "blue";
-                });
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;
             })

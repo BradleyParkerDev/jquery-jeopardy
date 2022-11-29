@@ -32,3 +32,18 @@ p{
 form{
     text-align: center;
 }
+
+label{
+    color: gold;
+    text-shadow: 1.5px  1px black;
+}
+
+#submit{
+    color: gold;
+    text-shadow: 1px  1px black; 
+    background-color: darkgrey;  
+}
+
+.selected{
+    background-color: grey;
+}

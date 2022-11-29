@@ -1,3 +1,6 @@
+///////////////////////////////////////////////////////////////////
+//Variable Declarations
+///////////////////////////////////////////////////////////////////
 let container = document.querySelector("#container");
 let gridItem = document.querySelectorAll("#container .grid-item");
 let question = document.querySelector('#question');
@@ -7,14 +10,9 @@ let scoreHeader = document.querySelector('h2');
 let score = 0;
 let points = 0;
 
-// Arrays for each row of questions
-let oneHundredQuestion = [];
-let twoHundredQuestion = [];
-let fourHundredQuestion = [];
-let sixHundredQuestion = [];
-let eightHundredQuestion = [];
-
-
+///////////////////////////////////////////////////////////////////
+//Fetching Jeopardy Data
+///////////////////////////////////////////////////////////////////
 //JSON data fetch
 let readJeopardyData = async () => {
     let newJGItem;
@@ -40,14 +38,9 @@ let readJeopardyData = async () => {
         });
     }
 
-
-
-
-
     //Event listerners for clicking grid items
     for(let i = 0; i < gridItem.length; i++){
         let random = 0;
-        //let newJGItem;
 
         if(gridItem[i].className === "grid-item one-hundred"){
             gridItem[i].addEventListener('click', function(){
@@ -111,6 +104,7 @@ let readJeopardyData = async () => {
         }
     } 
 
+    //Answer submission
     formAnswer.addEventListener('submit',function(event){
         event.preventDefault();
         if(newJGItem.value === "$100"){
@@ -148,23 +142,7 @@ let readJeopardyData = async () => {
 
 readJeopardyData();
 
-
-
-
-
-
-// function createJeopardyGridItem(data, i){
-//     jeopardyGridItem = {
-//         question: data.question,
-//         answer: data.answer,
-//         value: data.value,
-//         gridLocation: i
-//     };
-// }
-
-
-
-
+//Random number generator
 const getRandomNumber = function(max) {
     const rand = Math.random();
     const range = rand * max;

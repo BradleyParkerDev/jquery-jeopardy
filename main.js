@@ -131,6 +131,11 @@ let readJeopardyData = async () => {
 
         if(inputText.value === newJGItem.answer){
             score = score + points;
+            question.innerText = "Correct!";
+        }
+        else{
+            question.innerText = `Incorrect. Correct answer was "${newJGItem.answer}".`;
+
         }
         console.log(newJGItem.value)
         console.log(points);

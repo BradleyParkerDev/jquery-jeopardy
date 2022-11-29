@@ -25,20 +25,6 @@ let readJeopardyData = async () => {
     console.log(groupedData);
 
     ///////////////////////////////////////////////////////////////////
-    //Event listeners for hovering over grid items - color change
-    ///////////////////////////////////////////////////////////////////
-    for(let i = 0; i < gridItem.length; i++){
-        gridItem[i].addEventListener('mouseover', function(){
-            gridItem[i].style.backgroundColor = "grey";
-        });
-    }
-    for(let i = 0; i < gridItem.length; i++){
-        gridItem[i].addEventListener('mouseout', function(){
-                gridItem[i].style.backgroundColor = "blue";
-        });
-    }
-
-    ///////////////////////////////////////////////////////////////////
     //Event listerners for clicking grid items
     ///////////////////////////////////////////////////////////////////
     for(let i = 0; i < gridItem.length; i++){
@@ -46,6 +32,8 @@ let readJeopardyData = async () => {
         //Clicking $100 values
         if(gridItem[i].className === "grid-item one-hundred"){
             gridItem[i].addEventListener('click', function(){
+                
+                gridItem[i].style.backgroundColor = "grey";
                 random = getRandomNumber(groupedData.$100.length);
                 newJGItem = groupedData.$100[random];
                 console.log(newJGItem)
@@ -55,7 +43,10 @@ let readJeopardyData = async () => {
         //Clicking $200 values
         else if(gridItem[i].className === "grid-item two-hundred"){
             gridItem[i].addEventListener('click', function(){
+                
+                gridItem[i].style.backgroundColor = "grey";
                 random = getRandomNumber(groupedData.$200.length);
+
                 newJGItem = groupedData.$200[random];
                 console.log(newJGItem)
                 question.innerText = newJGItem.question;
@@ -64,6 +55,8 @@ let readJeopardyData = async () => {
         //Clicking $400 values
         else if(gridItem[i].className === "grid-item four-hundred"){
             gridItem[i].addEventListener('click', function(){
+                gridItem[i].style.backgroundColor = "grey";
+
                 random = getRandomNumber(groupedData.$400.length);
                 newJGItem = groupedData.$400[random];
                 console.log(newJGItem)
@@ -73,6 +66,8 @@ let readJeopardyData = async () => {
         //Clicking $600 values
         else if(gridItem[i].className === "grid-item six-hundred"){
             gridItem[i].addEventListener('click', function(){
+                gridItem[i].style.backgroundColor = "grey";
+
                 random = getRandomNumber(groupedData.$600.length);
                 newJGItem = groupedData.$600[random];
                 console.log(newJGItem)
@@ -82,6 +77,8 @@ let readJeopardyData = async () => {
         //Clicking $800 values
         else if(gridItem[i].className === "grid-item eight-hundred"){
             gridItem[i].addEventListener('click', function(){
+                gridItem[i].style.backgroundColor = "grey";
+
                 random = getRandomNumber(groupedData.$800.length);
                 newJGItem = groupedData.$800[random];
                 console.log(newJGItem)
@@ -136,3 +133,18 @@ const getRandomNumber = function(max) {
     const result = Math.ceil(range);
     return result;
 }
+
+
+    ///////////////////////////////////////////////////////////////////
+    //Event listeners for hovering over grid items - color change
+    ///////////////////////////////////////////////////////////////////
+    // for(let i = 0; i < gridItem.length; i++){
+    //     gridItem[i].addEventListener('mouseover', function(){
+    //         gridItem[i].style.backgroundColor = "grey";
+    //     });
+    // }
+    // for(let i = 0; i < gridItem.length; i++){
+    //     gridItem[i].addEventListener('mouseout', function(){
+    //             gridItem[i].style.backgroundColor = "blue";
+    //     });
+    // }

@@ -10,8 +10,11 @@
     background-color: blue;
     color: gold;
     font-weight: bold;
-}
 
+}
+.grid-item:hover {
+    background-color: grey;
+}
 h1{
     text-align: center;
     color: gold;

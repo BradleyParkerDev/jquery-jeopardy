@@ -10,23 +10,23 @@ let scoreHeader = document.querySelector('h2');
 let score = 0;
 let points = 0;
 
+
 ///////////////////////////////////////////////////////////////////
 //Fetching Jeopardy Data
 ///////////////////////////////////////////////////////////////////
 //JSON data fetch
 let readJeopardyData = async () => {
     let newJGItem;
-
     //fetching data
     let rawJeopardyData = await fetch ('jeopardy.json');
     let data = await rawJeopardyData.json()
-    
     //Grouping data by value
     let groupedData = _.groupBy(data,"value");
     console.log(groupedData);
 
-
+    ///////////////////////////////////////////////////////////////////
     //Event listeners for hovering over grid items - color change
+    ///////////////////////////////////////////////////////////////////
     for(let i = 0; i < gridItem.length; i++){
         gridItem[i].addEventListener('mouseover', function(){
             gridItem[i].style.backgroundColor = "grey";
@@ -38,7 +38,9 @@ let readJeopardyData = async () => {
         });
     }
 
+    ///////////////////////////////////////////////////////////////////
     //Event listerners for clicking grid items
+    ///////////////////////////////////////////////////////////////////
     for(let i = 0; i < gridItem.length; i++){
         let random = 0;
         //Clicking $100 values
@@ -88,7 +90,9 @@ let readJeopardyData = async () => {
         }
     } 
 
+    ///////////////////////////////////////////////////////////////////
     //Answer submission
+    ///////////////////////////////////////////////////////////////////
     formAnswer.addEventListener('submit',function(event){
         event.preventDefault();
         if(newJGItem.value === "$100"){
@@ -109,24 +113,23 @@ let readJeopardyData = async () => {
 
         if(inputText.value === newJGItem.answer){
             score = score + points;
+            console.log(`Points Earned: $${points}`);
             question.innerText = "Correct!";
         }
         else{
             question.innerText = `Incorrect. Correct answer was "${newJGItem.answer}".`;
-
+            console.log(`Points Missed: $${points}`);
         }
-        console.log(newJGItem.value)
-        console.log(points);
-        console.log(`Score: ${score}`);
-        scoreHeader.innerText = `Your Score: ${score}`;
-        inputText.value = '';
 
+        console.log(`Score: $${score}`);
+        scoreHeader.innerText = `Your Score: $${score}`;
+        inputText.value = '';
     });
 }    
 
 readJeopardyData();
 
-//Random number generator
+//Random number generator function
 const getRandomNumber = function(max) {
     const rand = Math.random();
     const range = rand * max;
